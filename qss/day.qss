@@ -1,0 +1,220 @@
+//设置背景颜色
+    this->setStyleSheet("background: rgb(239, 239, 239)");
+
+    ui->changeSkin->setStyleSheet("QPushButton{background-color: transparent; \
+                                  background-image: url(:/Resource/sun.png);\
+                                  }     \
+                                  QPushButton:hover{ \
+                                  background-image: url(:/Resource/moon.png);\
+                                  } ");
+
+    //TabView样式设置
+    setTabViewStyle();
+
+/**************** Roi按钮样式 ******************/
+    m_up = "QPushButton{background: transparent; \
+            background-image: url(:/Resource/Bup1.png); \
+            } \
+            QPushButton:hover{ \
+            background-image: url(:/Resource/Yup1.png); \
+            } \
+            QPushButton:pressed{ \
+            background-image: url(:/Resource/Gup1.png); \
+            }";
+
+    m_up1 = "QPushButton{background: transparent;\
+            background-image: url(:/Resource/Yup1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Bup1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gup1.png);\
+            }";
+
+    m_down = "QPushButton{background: transparent;\
+            background-image: url(:/Resource/Ydown1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Bdown1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gdown1.png);\
+            }";
+
+    m_down1 = "QPushButton{background: transparent;\
+            background-image: url(:/Resource/Bdown1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Ydown1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gdown1.png);\
+            }";
+
+    m_left = "QPushButton{background: transparent;\
+            background-image: url(:/Resource/Bleft1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Yleft1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gleft1.png);\
+            }";
+
+    m_left1 = "QPushButton{background: transparent;\
+            background-image: url(:/Resource/Yleft1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Bleft1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gleft1.png);\
+            }";
+
+    m_right = "QPushButton{background: transparent; \
+            background-image: url(:/Resource/Yright1.png);\
+            }\
+            QPushButton:hover{\
+            background-image: url(:/Resource/Bright1.png);\
+            } \
+            QPushButton:pressed{\
+            background-image: url(:/Resource/Gright1.png);\
+            }";
+
+    m_right1 = "QPushButton{background: transparent; \
+            background-image: url(:/Resource/Bright1.png); \
+            } \
+            QPushButton:hover{ \
+            background-image: url(:/Resource/Yright1.png); \
+            } \
+            QPushButton:pressed{ \
+            background-image: url(:/Resource/Gright1.png); \
+            }";
+
+    ui->roi_top_plus->setStyleSheet(m_up);
+    ui->roi_top_subtract->setStyleSheet(m_down);
+    ui->roi_bottom_plus->setStyleSheet(m_down1);
+    ui->roi_bottom_subtract->setStyleSheet(m_up1);
+    ui->roi_left_plus->setStyleSheet(m_left);
+    ui->roi_left_subtract->setStyleSheet(m_right);
+    ui->roi_right_plus->setStyleSheet(m_right1);
+    ui->roi_right_subtract->setStyleSheet(m_left1);
+
+/****************************** LcdNumStyle *********************/;
+    ui->sum_car_num->setSegmentStyle(QLCDNumber::Flat);
+    ui->sum_car_num->setStyleSheet("font: bold; "
+                                   "font-size: 30px; "
+                                   "color: rgb(241, 70, 62); "
+                                   "background-color: blue");  //背景、字体颜色设置
+
+    ui->used_car_num->setSegmentStyle(QLCDNumber::Flat);
+    ui->used_car_num->setStyleSheet("font: bold; "
+                                    "font-size: 30px; "
+                                    "color: rgb(241, 70, 62); "
+                                    "background-color: blue");  //背景、字体颜色设置
+
+    ui->remain_car_num->setSegmentStyle(QLCDNumber::Flat);
+    ui->remain_car_num->setStyleSheet("font: bold; "
+                                      "font-size: 30px; "
+                                      "color: rgb(241, 70, 62); "
+                                      "background-color: blue");  //背景、字体颜色设置
+
+/********************** label、pushbutton样式 **********************/
+    //label样式变量
+    m_labelStyle = "border-radius: 14px; "
+                  "color: rgb(0, 160, 255); "
+                  "background-color: rgb(250, 250, 250); "
+                  "font: bold 21pt 华文行楷; "
+                  "border: 2px solid white"; //rgb(0, 191, 255)
+
+    m_labelStyle1 = "border-radius: 14px; "
+                   "color: rgb(0, 191, 255); "
+                   "background-color: rgb(250, 250, 250); "
+                   "font: 20pt 黑体; "
+                   "border: 2px solid white";
+
+    m_outImgLabel->setStyleSheet("border: 14px groove rgb(0, 191, 255)");          //出场视频显示label
+    m_enterImgLabel->setStyleSheet("border: 14px groove rgb(0, 191, 255)");        //进场视频显示label
+
+    ui->enter_recongnition_label->setStyleSheet(m_labelStyle);           //入场识别结果标题label
+    ui->out_recongnition_label->setStyleSheet(m_labelStyle);             //出场识别结果标题label
+
+    ui->sum_car_label->setStyleSheet(m_labelStyle);                      //总车位label
+    ui->used_car_label->setStyleSheet(m_labelStyle);                     //已用车位label
+    ui->remain_car_label->setStyleSheet(m_labelStyle);                   //剩余车位label
+
+    ui->enter_record_title->setStyleSheet(m_labelStyle);                 //入场记录标题label
+    ui->out_record_title->setStyleSheet(m_labelStyle);                   //出场记录标题label
+
+    ui->enter_plate_number->setStyleSheet(m_labelStyle1);                //入场车牌显示label
+    ui->out_plate_number->setStyleSheet(m_labelStyle1);                  //出场车牌显示label
+
+    ui->enter_recongnition_lb->setStyleSheet("border: 10px groove rgb(0, 191, 255); "
+                                             "border-radius: 10px");  //入场识别结果图片显示label  padding:2px 4px
+    ui->out_recongnition_lb->setStyleSheet("border: 10px groove rgb(0, 191, 255); "
+                                           "border-radius: 10px");    //出场识别结果图片显示label
+
+/******************************* 按钮样式设计 *****************************************/
+    m_openCamPbStyle = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/start2.png); \
+            }  \
+            QPushButton:hover{ \
+            background-image: url(:/Resource/start1.png); \
+            } \
+            QPushButton:pressed{ \
+            background-image: url(:/Resource/start3.png); \
+            }";
+
+    m_closeCamPbStyle = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/stop1.png); \
+            }  \
+            QPushButton:hover{ \
+            background-image: url(:/Resource/stop2.png); \
+            } \
+            QPushButton:pressed{ \
+            background-image: url(:/Resource/stop3.png); \
+            }";
+
+    m_openCam1PbPushed = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/start3.png); \
+            }";
+
+    m_closeCam1PbPushed = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/stop3.png); \
+            }";
+
+    m_openCam2PbPushed = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/start3.png); \
+            }";
+
+    m_closeCam2PbPushed = "QPushButton{background-color: transparent; \
+            background-image: url(:/Resource/stop3.png); \
+            }";
+
+    ui->open_enter_cam->setStyleSheet(m_openCamPbStyle);       //入场打开摄像头1按钮样式
+    ui->close_enter_cam->setStyleSheet(m_closeCamPbStyle);     //入场关闭摄像头1按钮样式
+    ui->open_out_cam->setStyleSheet(m_openCamPbStyle);         //出场打开摄像头2按钮样式
+    ui->close_out_cam->setStyleSheet(m_closeCamPbStyle);       //出场关闭摄像头2按钮样式
+
+    if (m_cam1Open)
+    {
+        ui->open_enter_cam->setStyleSheet(m_openCam1PbPushed);     //入场打开摄像头1按钮样式
+        ui->close_enter_cam->setStyleSheet(m_closeCamPbStyle);     //入场关闭摄像头1按钮样式
+    }
+    if (!m_cam1Open)
+    {
+        ui->open_enter_cam->setStyleSheet(m_openCamPbStyle);       //入场打开摄像头1按钮样式
+        ui->close_enter_cam->setStyleSheet(m_closeCam1PbPushed);   //入场关闭摄像头1按钮样式
+    }
+
+    if (m_cam2Open)
+    {
+        ui->open_out_cam->setStyleSheet(m_openCam2PbPushed);      //出场打开摄像头2按钮样式
+        ui->close_out_cam->setStyleSheet(m_closeCamPbStyle);      //出场关闭摄像头2按钮样式
+    }
+    if (!m_cam2Open)
+    {
+        ui->open_out_cam->setStyleSheet(m_openCamPbStyle);         //出场打开摄像头2按钮样式
+        ui->close_out_cam->setStyleSheet(m_closeCam2PbPushed);     //出场关闭摄像头2按钮样式
+    }
